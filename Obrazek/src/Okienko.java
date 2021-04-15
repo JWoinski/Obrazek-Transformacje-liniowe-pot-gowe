@@ -204,15 +204,15 @@ public class Okienko {
             return (BufferedImage) img;
         }
 
-        // Create a buffered image with transparency
+        // tworzenie bufferedimage z przezroczystoscią
         BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
 
-        // Draw the image on to the buffered image
+        // rysuje obrazek na bufferedimage
         Graphics2D bGr = bimage.createGraphics();
         bGr.drawImage(img, 0, 0, null);
         bGr.dispose();
 
-        // Return the buffered image
+        // zwracam bufferedimage
         return bimage;
     }
     public static Image BlendImage(Image source,Image source2,String Algorithm) throws IOException {
@@ -236,7 +236,7 @@ public class Okienko {
         bi2.getGraphics().drawImage(source2, 0, 0, null);
 
         int temp=0;
-//odczyt pixeli obrazu w dwóch pętlach po kolumnach i wierszach
+//odczyt pixeli obrazu w dwóch pętlach po kolumnach i wierszach
         for (int i = 0; i < bi.getHeight(); i++) {
             for (int j = 0; j < bi.getWidth(); j++) {
 //odczyt składowych koloru RGB
